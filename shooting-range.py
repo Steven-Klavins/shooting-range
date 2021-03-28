@@ -1,5 +1,6 @@
 # Import pygame library
 import pygame
+import sys
 # Initialize pygame
 pygame.init()
 # Create screen/canvas + resolution
