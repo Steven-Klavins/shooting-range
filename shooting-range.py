@@ -11,6 +11,7 @@ screen = pygame.display.set_mode((1280, 720))
 # Import images
 wood_bg = pygame.image.load('Wood_BG.png') 
 land_bg = pygame.image.load('Land_BG.png') 
+water_bg = pygame.image.load('Water_BG.png') 
 
 # While True is our continuous game loop
 while True:
@@ -24,6 +25,7 @@ while True:
 
     screen.blit(land_bg,(0,560)) # pygame renders images in layers the assets as the code is executed
     # This means the top layer is last in the code
+    screen.blit(water_bg,(0,640))
 
     pygame.display.update() # This event continuously updates frames
     clock.tick(120) #Set frame rate to max of 120
