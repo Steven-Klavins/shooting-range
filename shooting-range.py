@@ -8,7 +8,9 @@ clock = pygame.time.Clock()
 # Create screen/canvas + resolution
 screen = pygame.display.set_mode((1280, 720))
 
-wood_bg = pygame.image.load('Wood_BG.png') # Import image
+# Import images
+wood_bg = pygame.image.load('Wood_BG.png') 
+land_bg = pygame.image.load('Land_BG.png') 
 
 # While True is our continuous game loop
 while True:
@@ -19,5 +21,9 @@ while True:
 
     screen.blit(wood_bg,(0,0)) # Here we place the image on to the surface with .blit
     # .blit takes two arguments, the image and the coordinates (0,0) which is the top left 
+
+    screen.blit(land_bg,(0,0)) # pygame renders images in layers the assets as the code is executed
+    # This means the top layer is last in the code
+
     pygame.display.update() # This event continuously updates frames
     clock.tick(120) #Set frame rate to max of 120
