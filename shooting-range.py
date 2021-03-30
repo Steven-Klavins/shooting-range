@@ -22,7 +22,7 @@ while True:
     screen.blit(wood_bg,(0,0)) # Here we place the image on to the surface with .blit
     # .blit takes two arguments, the image and the coordinates (0,0) which is the top left 
 
-    screen.blit(land_bg,(0,0)) # pygame renders images in layers the assets as the code is executed
+    screen.blit(land_bg,(0,560)) # pygame renders images in layers the assets as the code is executed
     # This means the top layer is last in the code
 
     pygame.display.update() # This event continuously updates frames
