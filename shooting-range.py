@@ -12,7 +12,8 @@ screen = pygame.display.set_mode((1280, 720))
 wood_bg = pygame.image.load('Wood_BG.png') 
 land_bg = pygame.image.load('Land_BG.png') 
 water_bg = pygame.image.load('Water_BG.png') 
-
+cloud1 = pygame.image.load('Cloud1.png') 
+cloud2 = pygame.image.load('Cloud2.png') 
 # While True is our continuous game loop
 while True:
     for event in pygame.event.get():
@@ -26,6 +27,13 @@ while True:
     screen.blit(land_bg,(0,560)) # pygame renders images in layers the assets as the code is executed
     # This means the top layer is last in the code
     screen.blit(water_bg,(0,640))
+
+    screen.blit(cloud1,(300,100))
+    screen.blit(cloud1,(600,180))
+    screen.blit(cloud2,(1080,120))
+    screen.blit(cloud2,(40,120))
+    screen.blit(cloud2,(420,20))
+    screen.blit(cloud1,(800,40))
 
     pygame.display.update() # This event continuously updates frames
     clock.tick(120) #Set frame rate to max of 120
