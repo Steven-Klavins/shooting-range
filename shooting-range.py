@@ -46,6 +46,7 @@ while True:
 
     land_position_y -= land_speed
 
+    # Animate land position is below 520 or above 600 reverse direction
     if land_position_y <= 520 or land_position_y >= 600:
         land_speed *= -1
 
