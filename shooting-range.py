@@ -18,13 +18,18 @@ cloud2 = pygame.image.load('Cloud2.png')
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT: 
-           pygame.quit()   # This event allows us to close window, without this the window wont close
-           sys.exit() # Finalises the closing of the game completely (kills all)
+           # This event allows us to close window, without this the window wont close
+           pygame.quit() 
+           # Finalises the closing of the game completely (kills all)  
+           sys.exit() 
 
-    screen.blit(wood_bg,(0,0)) # Here we place the image on to the surface with .blit
+    screen.blit(wood_bg,(0,0)) 
+
+    # Here we place the image on to the surface with .blit
     # .blit takes two arguments, the image and the coordinates (0,0) which is the top left 
+    screen.blit(land_bg,(0,560)) 
 
-    screen.blit(land_bg,(0,560)) # pygame renders images in layers the assets as the code is executed
+    # pygame renders images in layers the assets as the code is executed
     # This means the top layer is last in the code
     screen.blit(water_bg,(0,640))
 
