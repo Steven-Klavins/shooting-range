@@ -17,7 +17,9 @@ cloud2 = pygame.image.load('Cloud2.png')
 
 #Set animation variables 
 land_position_y = 560 
-land_speed = 1
+land_speed = 0.7
+water_position_y = 640
+water_speed = 2
 
 # While True is our continuous game loop
 while True:
@@ -36,7 +38,7 @@ while True:
 
     # pygame renders images in layers the assets as the code is executed
     # This means the top layer is last in the code
-    screen.blit(water_bg,(0,640))
+    screen.blit(water_bg,(0,water_position_y))
     screen.blit(cloud1,(300,100))
     screen.blit(cloud1,(600,180))
     screen.blit(cloud2,(1080,120))
@@ -45,10 +47,14 @@ while True:
     screen.blit(cloud1,(800,40))
 
     land_position_y -= land_speed
+    water_position_y -= water_speed
 
     # Animate land position is below 520 or above 600 reverse direction
     if land_position_y <= 520 or land_position_y >= 600:
         land_speed *= -1
+
+    if water_position_y <= 600 or water_position_y >= 680:
+        water_speed *= -1
 
     pygame.display.update() # This event continuously updates frames
     clock.tick(120) #Set frame rate to max of 120
