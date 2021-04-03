@@ -4,7 +4,7 @@ This a simple duck shooting range game I built in Python whilst taking the An in
 
 ## Screenshot
 <p align="center">
-<img src="Screenshot.png" alt="Game screenshot" width="400"/>
+<img src="Screenshot.png" alt="Game screenshot"/>
 </p>
 
 ## Dependencies 
