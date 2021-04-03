@@ -23,6 +23,7 @@ game_font = pygame.font.Font(None, 60)
 
 # Add surface for font to be rendered on, text, anti aliasing True and colour white
 text_surface = game_font.render('You Won!', True, (255,255,255))
+text_rect = text_surface.get_rect(center = (640, 360))
 
 # Set animation variables
 land_position_y = 560
@@ -68,7 +69,7 @@ while True:
     screen.blit(wood_bg, (0, 0))
 
     if len(duck_list) <=0:
-        screen.blit(text_surface, (300, 300))
+        screen.blit(text_surface, text_rect)
         
 
 
