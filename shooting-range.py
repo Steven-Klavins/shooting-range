@@ -53,14 +53,19 @@ while True:
         if event.type == pygame.MOUSEMOTION:
             crosshair_rect = crosshair.get_rect(center=event.pos)
 
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            for duck_rect in duck_list:
+                if crosshair_rect.colliderect(duck_rect):
+                    print('duck hit')
+
     screen.blit(wood_bg, (0, 0))
 
     # Here we place the image on to the surface with .blit
     # .blit takes two arguments, the image and the coordinates (0,0) which is the top left
     screen.blit(land_bg, (0, land_position_y))
 
-    # For each rectangle draw the duck image 
-    
+    # For each rectangle draw the duck image
+
     for duck_rect in duck_list:
         screen.blit(duck_surface, duck_rect)
 
