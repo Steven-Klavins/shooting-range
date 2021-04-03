@@ -9,6 +9,9 @@ clock = pygame.time.Clock()
 # Create screen/canvas + resolution
 screen = pygame.display.set_mode((1280, 720))
 
+# Hide mouse cursor
+pygame.mouse.set_visible(False)
+
 # Import images
 wood_bg = pygame.image.load('Wood_BG.png')
 land_bg = pygame.image.load('Land_BG.png')
