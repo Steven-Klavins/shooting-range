@@ -14,11 +14,11 @@ This a simple duck shooting range game I built in Python whilst taking the [An i
 * sys
 * random
 
-# Assets 
+## Assets 
 The assets for this game are open source from 
 https://opengameart.org/content/shooting-gallery
 
-# How To Run 
+## How To Run 
 
 ### 1. Ensure the above dependencies are installed
 
