@@ -18,6 +18,12 @@ cloud2 = pygame.image.load('Cloud2.png')
 crosshair = pygame.image.load('crosshair.png')
 duck_surface = pygame.image.load('duck.png')
 
+# Import font None (default font) and size 60
+game_font = pygame.font.Font(None, 60)
+
+# Add surface for font to be rendered on, text, anti aliasing True and colour white
+text_surface = game_font.render('You Won!', True, (255,255,255))
+
 # Set animation variables
 land_position_y = 560
 land_speed = 0.7
@@ -52,13 +58,19 @@ while True:
         # We set the center of the rect/image using event.pos (center of rect mouse position)
         if event.type == pygame.MOUSEMOTION:
             crosshair_rect = crosshair.get_rect(center=event.pos)
-
+            
+        # If button down and crosshair is colliding with a duck remove it from the array
         if event.type == pygame.MOUSEBUTTONDOWN:
             for index,duck_rect in enumerate (duck_list):
                 if crosshair_rect.colliderect(duck_rect):
                     del duck_list[index]
 
     screen.blit(wood_bg, (0, 0))
+
+    if len(duck_list) <=0:
+        screen.blit(text_surface, (300, 300))
+        
+
 
     # Here we place the image on to the surface with .blit
     # .blit takes two arguments, the image and the coordinates (0,0) which is the top left
@@ -92,6 +104,6 @@ while True:
     # Sometimes objects can run past there stopping point so we use >= <= never ==
     if water_position_y <= 600 or water_position_y >= 680:
         water_speed *= -1
-
+        
     pygame.display.update()  # This event continuously updates frames
     clock.tick(120)  # Set frame rate to max of 120
