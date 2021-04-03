@@ -66,7 +66,7 @@ while True:
         # If button down and crosshair is colliding with a duck remove it from the array
         if event.type == pygame.MOUSEBUTTONDOWN:
             for index,duck_rect in enumerate (duck_list):
-                if crosshair_rect.colliderect(duck_rect):
+                if duck_rect.collidepoint(event.pos):
                     del duck_list[index]
 
     screen.blit(wood_bg, (0, 0))
