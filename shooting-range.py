@@ -24,6 +24,8 @@ land_speed = 0.7
 water_position_y = 640
 water_speed = 2
 
+# Create an array of rectangles for ducks with random positions
+
 duck_list = []
 for duck in range(20):
     duck_position_x = random.randrange(50, 1200)
@@ -57,6 +59,8 @@ while True:
     # .blit takes two arguments, the image and the coordinates (0,0) which is the top left
     screen.blit(land_bg, (0, land_position_y))
 
+    # For each rectangle draw the duck image 
+    
     for duck_rect in duck_list:
         screen.blit(duck_surface, duck_rect)
 
