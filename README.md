@@ -2,6 +2,11 @@
 
 This a simple duck shooting range game I built in Python whilst taking the An introduction to game development in Python course.
 
+## Screenshot
+<p align="center">
+<img src="Screenshot.png" alt="Game screenshot" width="400"/>
+</p>
+
 ## Dependencies 
 * pygame
 * sys
